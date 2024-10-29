@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "del /s /q *.gitkeep"
+    "postinstall": "node -e \"const fs = require('fs'), path = require('path'); function deleteGitkeep(dir) { fs.readdirSync(dir).forEach(file => { const filePath = path.join(dir, file); if (fs.statSync(filePath).isDirectory()) { deleteGitkeep(filePath); } else if (file === '.gitkeep') { fs.unlinkSync(filePath); }}); } deleteGitkeep('.');\""
   },
   "dependencies": {
     "react": "^18",

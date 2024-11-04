@@ -8,7 +8,7 @@ First, install packages:
 npm install
 ```
 
-Then, delete the `"postinstall": "del /s /q *.gitkeep"` line in **package.json** and run the development server:
+Then, run the development server:
 
 ```bash
 npm run dev
